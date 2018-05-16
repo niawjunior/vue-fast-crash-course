@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div id="app">
+  <h1>{{ message }}</h1>
+  <h1>{{ number + 10 }}</h1>
+  <h1>{{ isActive ? 'is active' : 'not active'}}</h1>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+  let vm = new Vue({
+    el: '#app',
+    data: {
+      message: 'hello',
+      number:10,
+      isActive: true
+    }
+  })
+</script>
