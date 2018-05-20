@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<div class="container">
+    <div id="app">
+        <form action="">
+            <div class="col-sm-6 mt-5 ml-auto mr-auto">
+                <input v-model="options" type="text" class="form-control">
+            </div>
+        </form>
+        <fieldset class="form-group">
+            <legend>Radio Buttons</legend>
+            <div class="form-check">
+                <label for="" class="form-check-label">
+                    <input v-model="options" type="checkbox" class="form-check-input" name="optionRadio" id="optionsRadio1" value="option-1" checked> Option one is this a that &mdash; be sure to include why it's great
+                </label>
+            </div>
+            <div class="form-check">
+                <label for="" class="form-check-label">
+                    <input v-model="options" type="checkbox" class="form-check-input" name="optionRadio" id="optionsRadio2" value="option-2"> Option two can be something else and selecting it will deselect option one
+                </label>
+            </div>
+            <div class="form-check">
+                <label for="" class="form-check-label">
+                    <input v-model="options" type="checkbox" class="form-check-input" name="optionRadio" id="optionsRadio3" value="option-3"> Option thre is disabled
+                </label>
+            </div>
+        </fieldset>
+        <p>You selected {{ options.join(', ') }}</p>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            options: []
+        }
+    })
+</script>
+</body>
+
+</html>
