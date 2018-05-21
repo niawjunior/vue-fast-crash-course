@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .active {
+        color: green;
+    }
+    .notActive {
+        color: red;
+    }
+</style>
+<div id="app">
+  <h1 :class="{active: isActive, 'notActive': hasError}">
+        {{ name }}
+  </h1>
+  <h1 @click="myFunc" :class="[isActive ? 'active': 'notActive']"> {{ name }} </h1>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      isActive: false,
+      hasError: true,
+      name: 'pasupol bunsaen'
+    },
+    methods: {
+        myFunc: function() {
+            this.isActive = !this.isActive
+        }
+    }
+  })
+</script>
