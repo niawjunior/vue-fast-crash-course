@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div id="app">
+<h1 v-if="isActive">{{ name }}</h1>
+<h1 v-else-if="name === 'pasupol'">Hey Pasupol What's  up</h1>
+<h1 v-else>no user</h1>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      name: 'pasupol',
+      isActive: false
+    }
+  })
+</script>
